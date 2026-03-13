@@ -1,0 +1,9 @@
+services:
+  faster-whisper:
+    build: .
+    ports:
+      - "10300:10300"
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
+    command: --model base --language en
